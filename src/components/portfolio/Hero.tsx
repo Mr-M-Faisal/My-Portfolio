@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-center px-4 pt-28 pb-20 sm:px-6"
+      className="relative flex min-h-screen items-center overflow-x-clip px-4 pt-28 pb-20 sm:px-6"
     >
       <div className="mx-auto grid w-full max-w-6xl items-center gap-8 md:grid-cols-[1fr_0.85fr] md:gap-10 lg:gap-14">
         <div className="w-full">
