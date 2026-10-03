@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the portfolio as a single TanStack Start content route with section components in `src/components/portfolio/`; this preserves the established navigation and visual system.
+- Keep roadmap, project, and learning-log entries in top-level arrays in their respective section files; this makes editorial updates straightforward without changing rendering logic.
