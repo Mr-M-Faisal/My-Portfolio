@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 const links = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
+  { href: "#learning", label: "Learning" },
   { href: "#projects", label: "Projects" },
+  { href: "#log", label: "Log" },
   { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
 ];
@@ -19,9 +21,9 @@ export function Nav() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4">
+    <header className="fixed inset-x-0 top-0 z-50 flex flex-col items-center px-4 pt-4">
       <nav
-        className={`flex w-full max-w-4xl items-center justify-between rounded-full px-4 py-2.5 transition-all duration-500 sm:px-6 ${
+         className={`flex w-full max-w-5xl items-center justify-between rounded-full px-4 py-2.5 transition-all duration-500 sm:px-6 ${
           scrolled
             ? "border border-border/70 bg-background/70 shadow-[var(--shadow-card)] backdrop-blur-xl"
             : "border border-transparent"
@@ -30,12 +32,12 @@ export function Nav() {
         <a href="#top" className="font-display text-sm font-bold tracking-tight">
           MF<span className="text-primary">.</span>
         </a>
-        <ul className="hidden items-center gap-1 md:flex">
+         <ul className="hidden items-center gap-0 lg:flex">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-secondary/60 hover:text-foreground"
+                 className="rounded-full px-2.5 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-secondary/60 hover:text-foreground"
               >
                 {l.label}
               </a>
@@ -49,6 +51,17 @@ export function Nav() {
           Hire me
         </a>
       </nav>
+       <div className="w-full max-w-5xl overflow-x-auto rounded-full border border-border/70 bg-background/85 px-2 py-1.5 backdrop-blur-xl lg:hidden">
+         <ul className="flex min-w-max items-center justify-center gap-1">
+           {links.map((l) => (
+             <li key={l.href}>
+               <a href={l.href} className="block rounded-full px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:bg-secondary/60 hover:text-foreground">
+                 {l.label}
+               </a>
+             </li>
+           ))}
+         </ul>
+       </div>
     </header>
   );
 }

@@ -24,6 +24,7 @@ const groups = [
     icon: Cloud,
     title: "Cloud & DevOps",
     items: ["AWS S3", "CloudFront", "EC2", "Lambda", "DynamoDB", "Amplify"],
+    learning: ["Linux", "Docker", "GitHub Actions", "Terraform", "Kubernetes", "Prometheus & Grafana"],
   },
   {
     icon: Code2,
@@ -60,13 +61,26 @@ export function Skills() {
                   </span>
                   <h3 className="text-lg font-semibold">{g.title}</h3>
                 </div>
-                <ul className="mt-5 flex flex-wrap gap-2">
+                 {g.learning && <p className="mt-5 font-mono text-xs text-accent">Hands-on</p>}
+                 <ul className={`${g.learning ? "mt-3" : "mt-5"} flex flex-wrap gap-2`}>
                   {g.items.map((it) => (
                     <li key={it} className="chip font-mono">
                       {it}
                     </li>
                   ))}
                 </ul>
+                 {g.learning && (
+                   <>
+                     <p className="mt-6 font-mono text-xs text-accent">Currently learning</p>
+                     <ul className="mt-3 flex flex-wrap gap-2">
+                       {g.learning.map((it) => (
+                         <li key={it} className="chip border-dashed border-accent/50 text-accent/90 font-mono">
+                           {it}
+                         </li>
+                       ))}
+                     </ul>
+                   </>
+                 )}
               </div>
             </Reveal>
           ))}

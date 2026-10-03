@@ -24,13 +24,16 @@ export function About() {
                 I am a Software Engineering student at NUML Faisalabad specializing in Full-Stack
                 Web Development and Cloud Computing. I enjoy building real-time applications, clean
                 user interfaces, and scalable backend services. My primary focus is working with
-                modern web stacks and AWS cloud tools.
+                 modern web stacks and AWS cloud tools. I'm currently deepening my skills in DevOps:
+                 containers, CI/CD pipelines, and infrastructure as code, to ship and run applications
+                 reliably on the cloud.
               </p>
-              <div className="mt-6 grid grid-cols-3 gap-4 border-t border-border/70 pt-6 text-center">
+               <div className="mt-6 grid grid-cols-2 gap-4 border-t border-border/70 pt-6 text-center sm:grid-cols-4">
                 {[
                   { k: "3+", v: "Major Projects" },
                   { k: "6+", v: "AWS Services" },
                   { k: "6", v: "Languages" },
+                   { k: "4", v: "DevOps Projects In Progress" },
                 ].map((s) => (
                   <div key={s.v}>
                     <p className="font-display text-2xl font-bold text-accent">{s.k}</p>

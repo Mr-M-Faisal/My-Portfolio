@@ -5,7 +5,7 @@ export function Contact() {
   return (
     <section id="contact" className="px-4 py-24 sm:px-6">
       <div className="mx-auto max-w-5xl">
-        <SectionHeading eyebrow="05 — Contact" title="Let's build something together" />
+        <SectionHeading eyebrow="07 — Contact" title="Let's build something together" />
         <Reveal>
           <div className="glass-card relative overflow-hidden rounded-3xl p-8 text-center sm:p-14">
             <div className="absolute -top-24 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-primary/30 blur-[90px]" />

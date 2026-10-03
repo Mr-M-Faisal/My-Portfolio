@@ -5,7 +5,7 @@ export function Education() {
   return (
     <section id="education" className="px-4 py-24 sm:px-6">
       <div className="mx-auto max-w-5xl">
-        <SectionHeading eyebrow="04 — Education" title="Academic background" />
+        <SectionHeading eyebrow="06 — Education" title="Academic background" />
         <Reveal>
           <div className="glass-card rounded-2xl p-7 sm:p-9">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
@@ -27,6 +27,7 @@ export function Education() {
                     "Cloud Computing (AWS Infrastructure)",
                     "Software Engineering",
                     "Web Development",
+                     "DevOps & CI/CD",
                   ].map((c) => (
                     <li key={c} className="chip">
                       {c}
