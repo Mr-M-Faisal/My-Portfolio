@@ -1,13 +1,13 @@
 import { motion } from "motion/react";
 import { ArrowDown, Download, Sparkles } from "lucide-react";
 
-const stack = ["Next.js", "React", "Node.js", "AWS", "MongoDB", "Socket.IO"];
+const stack = ["Next.js", "React", "Node.js", "AWS", "MongoDB", "Socket.IO", "Docker", "GitHub Actions"];
 
 export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-center px-4 pt-28 pb-20 sm:px-6"
+      className="relative flex min-h-screen items-center overflow-x-clip px-4 pt-28 pb-20 sm:px-6"
     >
       <div className="mx-auto grid w-full max-w-6xl items-center gap-8 md:grid-cols-[1fr_0.85fr] md:gap-10 lg:gap-14">
         <div className="w-full">
@@ -38,7 +38,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
             className="mt-6 font-mono text-sm tracking-wide text-accent sm:text-base"
           >
-            Software Engineering Student &amp; Full-Stack Cloud Developer
+            Software Engineering Student &amp; Cloud / DevOps Learner
           </motion.p>
 
           <motion.p
@@ -47,7 +47,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.26, ease: [0.22, 1, 0.36, 1] }}
             className="mt-4 max-w-xl text-lg text-muted-foreground"
           >
-            Building modern, scalable web applications with Next.js, Node.js, and AWS Cloud.
+            Building scalable web applications with Next.js, Node.js, and AWS, and learning to automate everything with Docker, CI/CD, and Infrastructure as Code.
           </motion.p>
 
           <motion.div
