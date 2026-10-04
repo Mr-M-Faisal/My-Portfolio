@@ -32,13 +32,10 @@ export function Nav() {
         <a href="#top" className="font-display text-sm font-bold tracking-tight">
           MF<span className="text-primary">.</span>
         </a>
-         <ul className="hidden items-center gap-0 lg:flex">
+        <ul className="hidden items-center gap-0.5 lg:flex">
           {links.map((l) => (
             <li key={l.href}>
-              <a
-                href={l.href}
-                 className="rounded-full px-2.5 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-secondary/60 hover:text-foreground"
-              >
+              <a href={l.href} className="nav-link px-2.5 py-1.5 text-sm">
                 {l.label}
               </a>
             </li>
