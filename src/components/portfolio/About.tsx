@@ -3,7 +3,7 @@ import faisal from "@/assets/faisal.png.asset.json";
 
 export function About() {
   return (
-    <section id="about" className="px-4 py-24 sm:px-6">
+    <section id="about" className="px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-5xl">
         <SectionHeading eyebrow="01 — About" title="A developer with a cloud-first mindset" />
         <div className="grid items-center gap-10 md:grid-cols-[auto_1fr]">

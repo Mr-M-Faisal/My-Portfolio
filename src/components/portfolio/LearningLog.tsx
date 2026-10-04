@@ -10,7 +10,7 @@ const entries: { date: string; title: string; summary: string; tags: string[]; u
 
 export function LearningLog() {
   return (
-    <section id="log" className="scroll-mt-24 px-4 py-24 sm:px-6">
+    <section id="log" className="scroll-mt-24 px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-5xl">
         <SectionHeading eyebrow="05 — Learning Log" title="What I'm learning, in public" description="Short notes from my DevOps journey: what I tried, what broke, and what I learned." />
         <div className="grid gap-5 md:grid-cols-3">

@@ -15,7 +15,7 @@ export function Learning() {
   const completed = roadmap.filter((step) => step.status === "Done").length;
 
   return (
-    <section id="learning" className="scroll-mt-24 px-4 py-24 sm:px-6">
+    <section id="learning" className="scroll-mt-24 px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-5xl">
         <SectionHeading eyebrow="03 — Learning" title="My DevOps roadmap" description="Building real skills step by step. Honest progress, updated as I learn." />
         <p className="mb-6 font-mono text-sm text-accent">{completed} of {roadmap.length} completed</p>

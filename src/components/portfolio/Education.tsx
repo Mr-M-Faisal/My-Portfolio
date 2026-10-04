@@ -3,7 +3,7 @@ import { Reveal, SectionHeading } from "./Reveal";
 
 export function Education() {
   return (
-    <section id="education" className="px-4 py-24 sm:px-6">
+    <section id="education" className="px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-5xl">
         <SectionHeading eyebrow="06 — Education" title="Academic background" />
         <Reveal>

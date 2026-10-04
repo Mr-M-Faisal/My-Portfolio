@@ -73,7 +73,7 @@ function GithubActivity() {
 
 export function Projects() {
   return (
-    <section id="projects" className="px-4 py-24 sm:px-6">
+    <section id="projects" className="px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-5xl">
         <SectionHeading
           eyebrow="04 — Projects"
