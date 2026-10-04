@@ -45,9 +45,9 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
         <h3 className="mt-3 text-xl font-semibold transition-colors duration-300 group-hover:text-accent">{p.title}</h3>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.description}</p>
         <ul className="mt-5 flex flex-wrap gap-2">{p.tech.map((t) => <li key={t} className="chip font-mono !text-xs">{t}</li>)}</ul>
-        <div className="mt-auto flex flex-wrap gap-2 pt-7">
-          {p.liveUrl && <a href={p.liveUrl} target="_blank" rel="noreferrer" className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-transform duration-300 hover:scale-105">Live Demo <ArrowUpRight className="h-3.5 w-3.5" /></a>}
-          {p.repoUrl ? <a href={p.repoUrl} target="_blank" rel="noreferrer" className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-border px-4 py-2 text-xs font-semibold transition-colors duration-300 hover:border-accent hover:text-accent"><Github className="h-3.5 w-3.5" /> GitHub</a> : <span aria-disabled="true" className="inline-flex flex-1 cursor-not-allowed items-center justify-center rounded-full border border-border px-4 py-2 text-xs font-semibold text-muted-foreground opacity-60">Coming soon</span>}
+        <div className="mt-auto flex flex-col gap-2 pt-7 min-[420px]:flex-row">
+          {p.liveUrl && <a href={p.liveUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-11 flex-1 items-center justify-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-transform duration-300 hover:scale-105">Live Demo <ArrowUpRight className="h-3.5 w-3.5" /></a>}
+          {p.repoUrl ? <a href={p.repoUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-11 flex-1 items-center justify-center gap-1.5 rounded-full border border-border px-4 py-2 text-xs font-semibold transition-colors duration-300 hover:border-accent hover:text-accent"><Github className="h-3.5 w-3.5" /> GitHub</a> : <span aria-disabled="true" className="inline-flex min-h-11 flex-1 cursor-not-allowed items-center justify-center rounded-full border border-border px-4 py-2 text-xs font-semibold text-muted-foreground opacity-60">Coming soon</span>}
         </div>
       </article>
     </Reveal>
@@ -60,7 +60,11 @@ function GithubActivity() {
     <Reveal className="mt-12">
       <a href="https://github.com/Mr-M-Faisal" target="_blank" rel="noreferrer" className="glass-card block rounded-lg p-6">
         <div className="flex items-center gap-2 text-lg font-semibold"><Github className="h-5 w-5 text-accent" /> GitHub Activity <ArrowUpRight className="ml-auto h-4 w-4 text-muted-foreground" /></div>
-        {!failed && <img src="https://ghchart.rshah.org/Mr-M-Faisal" alt="Muhammad Faisal's GitHub contribution graph" loading="lazy" onError={() => setFailed(true)} className="mt-5 max-w-full" />}
+        {!failed && (
+          <div className="mt-5 overflow-x-auto">
+            <img src="https://ghchart.rshah.org/Mr-M-Faisal" alt="Muhammad Faisal's GitHub contribution graph" loading="lazy" onError={() => setFailed(true)} className="max-w-full" />
+          </div>
+        )}
         {failed && <p className="mt-3 text-sm text-muted-foreground">View activity on GitHub</p>}
       </a>
     </Reveal>
@@ -76,7 +80,7 @@ export function Projects() {
           title="Featured work"
           description="Selected builds that combine real-time systems, clean interfaces and cloud infrastructure."
         />
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.filter((p) => p.category === "featured").map((p, i) => <ProjectCard key={p.title} p={p} i={i} />)}
         </div>
         <h3 className="mt-16 mb-6 text-2xl font-semibold">DevOps Projects (In Progress)</h3>

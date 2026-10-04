@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-center overflow-x-clip px-4 pt-28 pb-20 sm:px-6"
+      className="relative flex min-h-svh items-center overflow-x-clip px-4 pt-32 pb-16 sm:px-6 sm:pt-28 sm:pb-20"
     >
       <div className="mx-auto grid w-full max-w-6xl items-center gap-8 md:grid-cols-[1fr_0.85fr] md:gap-10 lg:gap-14">
         <div className="w-full">
@@ -25,7 +25,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-6 text-5xl leading-[0.95] font-bold sm:text-6xl lg:text-8xl"
+            className="mt-6 text-[clamp(2.6rem,7.5vw+0.8rem,6rem)] leading-[0.95] font-bold"
           >
             Muhammad
             <br />
@@ -54,11 +54,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.34, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-10 flex flex-wrap items-center gap-3"
+            className="mt-10 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center"
           >
             <a
               href="#projects"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform duration-300 hover:scale-[1.04]"
+              className="group relative inline-flex min-h-11 items-center justify-center gap-2 overflow-hidden rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform duration-300 hover:scale-[1.04]"
             >
               View My Work
               <ArrowDown className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
@@ -66,7 +66,7 @@ export function Hero() {
             <a
               href="/cv-muhammad-faisal.pdf"
               download
-              className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent"
             >
               <Download className="h-4 w-4" />
               Download CV
@@ -77,7 +77,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-14 flex flex-wrap gap-2"
+            className="mt-10 flex flex-wrap gap-2 sm:mt-14"
           >
             {stack.map((s) => (
               <li key={s} className="chip font-mono">
