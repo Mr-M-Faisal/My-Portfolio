@@ -40,7 +40,7 @@ const groups = [
 
 export function Skills() {
   return (
-    <section id="skills" className="px-4 py-24 sm:px-6">
+    <section id="skills" className="px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-5xl">
         <SectionHeading
           eyebrow="02 — Skills"

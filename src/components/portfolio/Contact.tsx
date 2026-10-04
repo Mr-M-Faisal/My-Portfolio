@@ -3,7 +3,7 @@ import { Reveal, SectionHeading } from "./Reveal";
 
 export function Contact() {
   return (
-    <section id="contact" className="px-4 py-24 sm:px-6">
+    <section id="contact" className="px-4 py-16 sm:px-6 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-5xl">
         <SectionHeading eyebrow="07 — Contact" title="Let's build something together" />
         <Reveal>
@@ -16,8 +16,9 @@ export function Contact() {
               href="mailto:mfaisalking68@gmail.com"
               className="relative mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform duration-300 hover:scale-105"
             >
-              <Mail className="h-4 w-4" />
-              Send Mail: mfaisalking68@gmail.com
+              <Mail className="h-4 w-4 shrink-0" />
+              <span className="sm:hidden">Send Mail</span>
+              <span className="hidden break-all sm:inline">Send Mail: mfaisalking68@gmail.com</span>
             </a>
             <div className="relative mt-8 flex justify-center gap-3">
               {[
@@ -43,7 +44,10 @@ export function Contact() {
           </div>
         </Reveal>
       </div>
-      <footer className="mx-auto mt-20 max-w-5xl border-t border-border/70 pt-8 text-center text-sm text-muted-foreground">
+      <footer
+        className="mx-auto mt-20 max-w-5xl border-t border-border/70 pt-8 text-center text-sm text-muted-foreground"
+        style={{ paddingBottom: "max(2rem, env(safe-area-inset-bottom))" }}
+      >
         © 2026 Muhammad Faisal. All rights reserved.
       </footer>
     </section>

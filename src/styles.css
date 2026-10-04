@@ -92,6 +92,11 @@
     scroll-behavior: smooth;
   }
 
+  html,
+  body {
+    overflow-x: clip;
+  }
+
   section[id] {
     scroll-margin-top: 8rem;
   }
@@ -101,6 +106,24 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    .animate-orb,
+    .animate-spin-slow {
+      animation: none;
+    }
+  }
+
+  /* Lighter blur layers on small screens for smoother scrolling */
+  @media (max-width: 640px) {
+    .animate-orb {
+      filter: blur(70px);
+    }
   }
 
   h1,
@@ -137,10 +160,12 @@
     border-color 0.35s ease,
     box-shadow 0.35s ease;
 
-  &:hover {
-    transform: translateY(-6px);
-    border-color: color-mix(in oklab, var(--primary) 55%, transparent);
-    box-shadow: var(--shadow-elegant);
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-6px);
+      border-color: color-mix(in oklab, var(--primary) 55%, transparent);
+      box-shadow: var(--shadow-elegant);
+    }
   }
 }
 
@@ -154,13 +179,15 @@
     box-shadow 0.35s ease,
     transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 
-  &:hover {
-    color: var(--foreground);
-    background: color-mix(in oklab, white 6%, transparent);
-    box-shadow:
-      0 0 0 1px color-mix(in oklab, var(--primary) 28%, transparent),
-      0 0 24px -6px color-mix(in oklab, var(--glow) 60%, transparent);
-    transform: translateY(-1px);
+  @media (hover: hover) {
+    &:hover {
+      color: var(--foreground);
+      background: color-mix(in oklab, white 6%, transparent);
+      box-shadow:
+        0 0 0 1px color-mix(in oklab, var(--primary) 28%, transparent),
+        0 0 24px -6px color-mix(in oklab, var(--glow) 60%, transparent);
+      transform: translateY(-1px);
+    }
   }
 
   &:active {
@@ -195,11 +222,13 @@
     transform 0.25s ease,
     background 0.25s ease;
 
-  &:hover {
-    color: var(--foreground);
-    transform: translateY(-2px);
-    border-color: color-mix(in oklab, var(--primary) 60%, transparent);
-    background: color-mix(in oklab, var(--primary) 14%, transparent);
+  @media (hover: hover) {
+    &:hover {
+      color: var(--foreground);
+      transform: translateY(-2px);
+      border-color: color-mix(in oklab, var(--primary) 60%, transparent);
+      background: color-mix(in oklab, var(--primary) 14%, transparent);
+    }
   }
 }
 
