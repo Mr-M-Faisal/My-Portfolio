@@ -32,13 +32,10 @@ export function Nav() {
         <a href="#top" className="font-display text-sm font-bold tracking-tight">
           MF<span className="text-primary">.</span>
         </a>
-         <ul className="hidden items-center gap-0 lg:flex">
+        <ul className="hidden items-center gap-0.5 lg:flex">
           {links.map((l) => (
             <li key={l.href}>
-              <a
-                href={l.href}
-                 className="rounded-full px-2.5 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-secondary/60 hover:text-foreground"
-              >
+              <a href={l.href} className="nav-link px-2.5 py-1.5 text-sm">
                 {l.label}
               </a>
             </li>
@@ -46,16 +43,16 @@ export function Nav() {
         </ul>
         <a
           href="#contact"
-          className="rounded-full bg-primary px-4 py-1.5 text-sm font-medium text-primary-foreground transition-transform duration-300 hover:scale-105"
+          className="rounded-full bg-primary px-4 py-1.5 text-sm font-medium text-primary-foreground transition-all duration-300 hover:scale-105 hover:shadow-[0_0_24px_-6px_color-mix(in_oklab,var(--glow)_70%,transparent)]"
         >
           Hire me
         </a>
       </nav>
        <div className="w-full max-w-5xl overflow-x-auto rounded-full border border-border/70 bg-background/85 px-2 py-1.5 backdrop-blur-xl lg:hidden">
-         <ul className="flex min-w-max items-center justify-center gap-1">
+         <ul className="flex min-w-max items-center justify-center gap-0.5">
            {links.map((l) => (
              <li key={l.href}>
-               <a href={l.href} className="block rounded-full px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:bg-secondary/60 hover:text-foreground">
+               <a href={l.href} className="nav-link block px-2.5 py-1 text-xs">
                  {l.label}
                </a>
              </li>

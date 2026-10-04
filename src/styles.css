@@ -144,6 +144,30 @@
   }
 }
 
+@utility nav-link {
+  position: relative;
+  border-radius: 999px;
+  color: var(--muted-foreground);
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.35s ease,
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &:hover {
+    color: var(--foreground);
+    background: color-mix(in oklab, white 6%, transparent);
+    box-shadow:
+      0 0 0 1px color-mix(in oklab, var(--primary) 28%, transparent),
+      0 0 24px -6px color-mix(in oklab, var(--glow) 60%, transparent);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.96);
+  }
+}
+
 @utility grid-lines {
   background-image: linear-gradient(
       to right,
