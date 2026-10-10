@@ -11,7 +11,7 @@ export function About() {
             <div className="group relative mx-auto w-fit">
               <div className="animate-spin-slow absolute -inset-1.5 rounded-full bg-[conic-gradient(from_0deg,var(--color-primary),var(--color-accent),transparent_70%)] opacity-80 blur-[2px]" />
               <img
-                src={faisal.url}
+                src={faisal.png}
                 alt="Portrait of Muhammad Faisal"
                 loading="lazy"
                 className="relative h-36 w-36 rounded-full object-cover ring-4 ring-background transition-transform duration-500 group-hover:scale-105 sm:h-44 sm:w-44"
