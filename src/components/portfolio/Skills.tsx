@@ -24,7 +24,7 @@ const groups = [
     icon: Cloud,
     title: "Cloud & DevOps",
     items: ["AWS S3", "CloudFront", "EC2", "Lambda", "DynamoDB", "Amplify"],
-    learning: ["Linux", "Docker", "GitHub Actions", "Terraform", "Kubernetes", "Prometheus & Grafana"],
+    learning: ["Linux", "Docker", "GitHub Actions", "Terraform", "Kubernetes", "Prometheus & Grafana", "Android Development"],
   },
   {
     icon: Code2,

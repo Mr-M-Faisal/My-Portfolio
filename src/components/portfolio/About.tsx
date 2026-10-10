@@ -32,7 +32,7 @@ export function About() {
                   { k: "3+", v: "Major Projects" },
                   { k: "6+", v: "AWS Services" },
                   { k: "6", v: "Languages" },
-                   { k: "4", v: "DevOps Projects In Progress" },
+                    { k: "1", v: "DevOps Projects In Progress" },
                 ].map((s) => (
                   <div key={s.v}>
                     <p className="font-display text-2xl font-bold text-accent">{s.k}</p>
